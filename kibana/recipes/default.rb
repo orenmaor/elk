@@ -38,8 +38,8 @@ template "/etc/nginx/.htpasswd" do
   group "root"
   mode 0644
   variables ({
-	:username = username,
-	:password = hash
+	:username => username,
+	:password => hash
   })
   notifies :restart, "service[nginx]", :delayed
 end
