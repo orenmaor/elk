@@ -160,8 +160,8 @@ On the OpsWorks dashboard, select "Add Stack". Most default values are fine (or 
         "password": "<REPLACE WITH KIBANA PASSWORD>"
     },
     "logstash": {
-        "sqs_queue" : "<REPLACE ME WITH SQS QUEUE>",
-        "sqs_region" : "<REPLACE ME WITH SQS REGION>""
+        "sqs_queue" : "<REPLACE ME NAME OF SQS QUEUE(NOT URL/ARN)>",
+        "sqs_region" : "<REPLACE ME WITH SQS REGION>"
     }
 }
 ```
