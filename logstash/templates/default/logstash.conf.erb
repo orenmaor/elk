@@ -1,0 +1,13 @@
+input {
+  sqs {
+    queue => "<%= node[:logstash][:sqs_queue] %>" 
+    region => "<%= node[:logstash][:sqs_region] %>"
+  }
+}
+output {
+stdout { }
+  elasticsearch {
+    cluster => "logstash"
+    protocol => "http"
+  }
+}

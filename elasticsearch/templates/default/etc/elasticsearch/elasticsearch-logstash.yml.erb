@@ -1,0 +1,10 @@
+cloud:
+  aws:
+    access_key: <%= node[:elasticsearch][:access_key] %> 
+    secret_key: <%= node[:elasticsearch][:secret_key] %>
+    region: <%= node[:elasticsearch][:region] %>
+cluster.name: logstash 
+node.name: <%= node[:hostname] %>
+node.data: false
+discovery:
+  type: ec2

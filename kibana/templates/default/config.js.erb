@@ -1,0 +1,35 @@
+define(['settings'],
+function (Settings) {
+
+
+  /** @scratch /configuration/config.js/2
+   *
+   * === Parameters
+   */
+  return new Settings({
+
+    elasticsearch: "http://<%= node["ipaddress"] -%>:9200",
+
+    default_route     : '/dashboard/file/default.json',
+
+    kibana_index: "kibana-logstash",
+
+    panel_names: [
+      'histogram',
+      'map',
+      'goal',
+      'table',
+      'filtering',
+      'timepicker',
+      'text',
+      'hits',
+      'column',
+      'trends',
+      'bettermap',
+      'query',
+      'terms',
+      'stats',
+      'sparklines'
+    ]
+  });
+});
