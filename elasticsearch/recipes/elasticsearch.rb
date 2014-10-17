@@ -3,6 +3,13 @@ service "elasticsearch" do
   supports :status => true, :start => true, :stop => true, :restart => true
 end
 
+directory "/data" do
+  action :create
+  mode 0775
+  owner "elasticsearch"
+  group "elasticsearch"
+end
+
 include_recipe "elasticsearch::plugins"
 include_recipe "elasticsearch::ec2"
 

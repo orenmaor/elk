@@ -8,6 +8,30 @@ This is a bunch of cookbooks that will allow you to run a complete Logstash setu
 - An ElasticSearch/Kibana cluster layer (Amazon Linux) – All log messages are stored and indexed here.  Viewable on an Angular.js interface on top of ElasticSearch to search, graph etc.
 - A LogStash cluster layer (Amazon Linux) – Takes the messages from the RabbitMQ fanout and puts them into ElasticSearch.
 
+
+## EC2 Setup
+
+Before diving into OpsWorks, you'll need to do a bit of setup in the *EC2* area of AWS.
+
+#### Create VPC
+You can run the attached CloudFormation script, or do the work manually(See Below):
+
+Create a VPC with X Public Subnets and X Private Subnets.  Create X NATS and put them into the Public Subnet.  Create a VPN Server and put it in the Public Subnet.
+
+Create an `All Internal Servers` security group for all servers in the Private Subnet 
+```
+TCP Port      Source
+--------      ------
+ALL TRAFFIC   sg-xxxxxxxx (ID of the OpenVPN Servers security group)
+```
+
+Create a `NAT Server Servers` security group that allows traffic between clients and the NATs
+```
+TCP Port      Source
+--------      ------
+ALL TRAFFIC   sg-xxxxxxxx (ID of the All Servers security group)
+```
+
 ## Setting up Security Groups
 
 Go to the **Security Groups** section (in the **VPC** area, not the regular **EC2** one).
@@ -45,7 +69,7 @@ In the EC2 dashboard, create a new ELB
 ```
 Load Balancer Name: <name>
 Create LB inside: <id of your VPC>
-Create an internal load balancer: no
+Create an internal load balancer: yes 
 ```
 
 **Listener Configuration:**
