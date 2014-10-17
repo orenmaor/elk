@@ -7,3 +7,8 @@ rpm_package "elasticsearch-rpm" do
     source "#{Chef::Config[:file_cache_path]}/elasticsearch.rpm"
     action :install
 end
+
+execute "elasticsarch_own" do
+  command "chown elasticsearch:elasticsearch /data"
+end
+
