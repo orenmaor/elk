@@ -110,7 +110,10 @@ Create `logstash-writer` the policy below: Generate an Access Key and make a not
       "Sid": "Stmt1389301427000",
       "Effect": "Allow",
       "Action": [
-        "sqs:SendMessage"
+        "sqs:SendMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:GetQueueUrl",
+        "sqs:ListQueues"
       ],
       "Resource": [
         "{ARN of your queue, eg. arn:aws:sqs:us-east-1:000000000:logstash}"
