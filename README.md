@@ -1,5 +1,4 @@
-# A complete Logstash stack on [AWS OpsWorks](http://aws.amazon.com/opsworks/)
-
+# A complete ELK stack on [AWS OpsWorks](http://aws.amazon.com/opsworks/)
 
 This is a bunch of cookbooks that will allow you to run a complete Logstash setup on a scalable 
 [AWS OpsWorks](http://aws.amazon.com/opsworks/) stack. 
