@@ -107,18 +107,7 @@ Create IAM Roles and Instance Profiles. Also in IAM, create a Role called `logst
       "Sid": "Stmt1393205558000",
       "Effect": "Allow",
       "Action": [
-        "ec2:AttachVolume",
-        "ec2:CreateSnapshot",
-        "ec2:CreateTags",
-        "ec2:CreateVolume",
-        "ec2:DeleteSnapshot",
-        "ec2:DeleteVolume",
-        "ec2:DescribeSnapshotAttribute",
         "ec2:Describe*",
-        "ec2:DetachVolume",
-        "ec2:EnableVolumeIO",
-        "ec2:ImportVolume",
-        "ec2:ModifyVolumeAttribute"
       ],
       "Resource": [
         "*"
