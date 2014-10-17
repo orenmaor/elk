@@ -3,7 +3,6 @@ service "elasticsearch" do
   supports :status => true, :start => true, :stop => true, :restart => true
 end
 
-include_recipe "elasticsearch::mount"
 include_recipe "elasticsearch::plugins"
 include_recipe "elasticsearch::ec2"
 
