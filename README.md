@@ -146,7 +146,6 @@ On the OpsWorks dashboard, select "Add Stack". Most default values are fine (or 
 
 ## Setting up your stack
 
-- Set `git://github.com/orenmaor/elk.git` as a repository URL for your custom cookbooks.
 - Use the following Chef custom JSON:
 
 ```json
