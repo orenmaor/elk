@@ -189,3 +189,21 @@ On the OpsWorks dashboard, select "Add Stack". Most default values are fine (or 
     }
 }
 ```
+### Configure Custom Chef recipes
+
+#### ElasticSearch/Kibana
+
+![elasticsearch/kibana recipes](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/Recipe-ElasticSearch.png)
+
+#### Logstash
+
+![logstash recipes](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/Recipe-Logstash.png)
+
+### Configure EBS Volumes - ElasticSearch/Kibana (Optional)
+
+![elasticsearch/kibana ebs](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/EBS-ElasticSearch.png)
+
+### Configure ELB - ElasticSearch/Kibana 
+
+![elasticsearch/kibana elb](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/InternalLB-Kibana.png)
+
