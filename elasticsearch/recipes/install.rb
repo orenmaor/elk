@@ -8,7 +8,3 @@ rpm_package "elasticsearch-rpm" do
     action :install
 end
 
-execute "elasticsarch_own" do
-  command "chown elasticsearch:elasticsearch /data"
-end
-

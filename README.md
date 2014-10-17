@@ -130,7 +130,7 @@ Create IAM Roles and Instance Profiles. Also in IAM, create a Role called `logst
       "Sid": "Stmt1393205558000",
       "Effect": "Allow",
       "Action": [
-        "ec2:Describe*",
+        "ec2:Describe*"
       ],
       "Resource": [
         "*"

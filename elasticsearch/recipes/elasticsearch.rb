@@ -10,6 +10,10 @@ directory "/data" do
   group "elasticsearch"
 end
 
+execute "elasticsarch_own" do
+  command "chown elasticsearch:elasticsearch /data"
+end
+
 include_recipe "elasticsearch::plugins"
 include_recipe "elasticsearch::ec2"
 
