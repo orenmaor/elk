@@ -5,6 +5,7 @@ cloud:
     region: <%= node[:elasticsearch][:region] %>
 cluster.name: logstash 
 node.name: <%= node[:hostname] %>
+http.cors.enabled: true
 path.data: /data
 discovery:
   type: ec2

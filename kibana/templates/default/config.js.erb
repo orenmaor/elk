@@ -8,8 +8,10 @@ function (Settings) {
    */
   return new Settings({
 
-    elasticsearch: "http://<%= node["ipaddress"] -%>:9200",
-
+#   elasticsearch: "http://<%= node["ipaddress"] -%>:9200",
+   
+    elasticsearch: "http://"+window.location.hostname+":80",
+    
     default_route     : '/dashboard/file/default.json',
 
     kibana_index: "kibana-logstash",
