@@ -39,7 +39,6 @@ Create an `ElasticSearch Servers` security group that allows ElasticSearch traff
 ```
 TCP Port      Source
 --------      ------
-9200-9400     sg-xxxxxxxx (ID of the All Servers security group)
 9200-9400     sg-xxxxxxxx (ID of this group - ElasticSearch Servers Security Group)
 ```
 
@@ -62,13 +61,11 @@ TCP Port      Source
 
 #### Create Elasticsearch Load Balancer
 
-Next, we want to be able to put an ELB in front of our Elasticsearch array. We'll create an *internal* ELB in our VPC; Kibana and Logstash instances will be able to talk to it, but it will be inaccessable to the outside world.
+Next, we want to be able to put an ELB in front of our Elasticsearch array. We'll create an ELB in our VPC; Kibana will be accessible from the outside, and Logstash instances will be able to talk to it.
 
 In the EC2 dashboard, create a new ELB
 ```
 Load Balancer Name: <name>
-Create LB inside: <id of your VPC>
-Create an internal load balancer: yes 
 ```
 
 **Listener Configuration:**
@@ -96,9 +93,7 @@ If you're planning on using Amazon's SQS as a "broker" between log producers and
 
 You can just use default values when creating a queue. Make a note of the ARN of your new queue.
 
-
 ### IAM Setup
-
 
 Create `logstash-writer` the policy below: Generate an Access Key and make a note of it, for clients.
 

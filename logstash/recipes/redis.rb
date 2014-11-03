@@ -10,7 +10,7 @@
 include_recipe "logstash::install"
 
 template "/etc/logstash/conf.d/logstash.conf" do
-  source "logstash.conf.erb"
+  source "logstash-redis.conf.erb"
   owner "root"
   group "root"
   mode 0644

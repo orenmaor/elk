@@ -2,10 +2,11 @@ input {
   redis {
     host => "127.0.0.1"
     type => "redis-input"
-    threads => 10redis
+    threads => 10
     data_type => "list"
     key => "logstash"
     format => "json_event"
+    password => "<%= node[:redis][:password] %>"
   }
 }
 
