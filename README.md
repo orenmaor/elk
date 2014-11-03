@@ -5,7 +5,7 @@ This is a bunch of cookbooks that will allow you to run a complete Logstash setu
 
 - Agents wil ship their logs to SQS and the Logstash server cluster uses it as an input source.
 - An ElasticSearch/Kibana cluster layer (Amazon Linux) – All log messages are stored and indexed here.  Viewable on an Angular.js interface on top of ElasticSearch to search, graph etc.
-- A LogStash cluster layer (Amazon Linux) – Takes the messages from the RabbitMQ fanout and puts them into ElasticSearch.
+- A LogStash cluster layer (Amazon Linux) – Takes the messages from the SQS fanout and puts them into ElasticSearch.
 
 
 ## EC2 Setup
