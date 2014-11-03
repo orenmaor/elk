@@ -194,7 +194,7 @@ On the OpsWorks dashboard, select "Add Stack". Most default values are fine (or 
 
 #### Logstash
 
-![logstash recipes](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/Recipe-Logstash.png)
+![logstash recipes](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/Recipe-Logstash-sqs.png)
 
 ### Configure EBS Volumes - ElasticSearch/Kibana (Optional)
 
