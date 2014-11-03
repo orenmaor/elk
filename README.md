@@ -202,5 +202,5 @@ On the OpsWorks dashboard, select "Add Stack". Most default values are fine (or 
 
 ### Configure ELB - ElasticSearch/Kibana 
 
-![elasticsearch/kibana elb](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/InternalLB-Kibana.png)
+![elasticsearch/kibana elb](https://s3.amazonaws.com/sturdy-github/orenmaor/elk/KibanaLB.png)
 
