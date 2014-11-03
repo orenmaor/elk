@@ -1,0 +1,17 @@
+input {
+  redis {
+    host => "127.0.0.1"
+    type => "redis-input"
+    threads => 10redis
+    data_type => "list"
+    key => "logstash"
+    format => "json_event"
+  }
+}
+
+output {
+  elasticsearch {
+    cluster => "logstash"
+    protocol => "http"
+  }
+}
